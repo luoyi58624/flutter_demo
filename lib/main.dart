@@ -20,7 +20,7 @@ class _MyApp extends StatelessWidget {
         body: Center(
           child: ElevatedButton(
             onPressed: () {
-              ToastUtil.showToast('hello');
+              ToastUtil.showToast('哈喽');
             },
             child: const Text('hello'),
           ),
