@@ -1,7 +1,7 @@
 name: flutter_demo
 description: "A new Flutter project."
 publish_to: 'none'
-version: 1.0.8
+version: 1.0.9
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
@@ -13,7 +13,14 @@ dependencies:
     git:
       url: https://gitee.com/luoyi666/my_flutter.git
       ref: v1.1.6
-
+  my_flutter_plugin:
+    git:
+      url: https://gitee.com/luoyi666/my_flutter_plugin.git
+      ref: v1.1.7
+  my_flutter_local_notify:
+    git:
+      url: https://gitee.com/luoyi666/my_flutter_local_notify.git
+      ref: v1.0.5
 dev_dependencies:
   flutter_test:
     sdk: flutter
