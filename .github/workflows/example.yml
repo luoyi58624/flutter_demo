@@ -1,0 +1,29 @@
+name: build apk
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.16.5'
+          channel: 'stable'
+          architecture: x64
+          cache: true
+          cache-key: flutter
+      - run: flutter build apk --target-platform android-arm64
+      - name: Releases apk
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/flutter-apk/app-release.apk"
+          token: ${{ secrets.TOKEN }}
