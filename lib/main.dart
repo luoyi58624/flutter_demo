@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter/my_flutter.dart';
 
-void main() {
-  debugPrint('init');
-  debugPrint('hello');
+void main() async {
+  await initMyFlutter();
   runApp(const _MyApp());
 }
 
@@ -11,14 +11,16 @@ class _MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MyApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text('首页'),
         ),
         body: Center(
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              ToastUtil.showToast('hello');
+            },
             child: const Text('hello'),
           ),
         ),

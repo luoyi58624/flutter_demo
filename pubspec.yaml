@@ -9,6 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  my_flutter:
+    git:
+      url: https://gitee.com/luoyi666/my_flutter.git
+      ref: v1.1.6
 
 dev_dependencies:
   flutter_test:
