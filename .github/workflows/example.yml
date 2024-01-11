@@ -21,9 +21,10 @@ jobs:
           architecture: x64
           cache: true
           cache-key: flutter
-      - run: flutter build apk --target-platform android-arm64
-      - name: Releases apk
-        uses: ncipollo/release-action@v1
+      - run: flutter build web --base-href /flutter_demo/
+      - name: Deploy Web
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          artifacts: "build/app/outputs/flutter-apk/app-release.apk"
-          token: ${{ secrets.TOKEN }}
+          branch: page
+          folder: build/web
+          clean: true
