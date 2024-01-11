@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_flutter/my_flutter.dart';
 
 void main() async {
+  LoggerUtil.i('xxxx');
   await initMyFlutter();
   runApp(const _MyApp());
 }
