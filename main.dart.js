@@ -57113,7 +57113,7 @@ P(a){var s=null
 return new A.F8(new A.uj(new A.pD(B.ZE,new A.O9(s,s,1/0,56),s),A.yQ(new A.BF(new A.a7p(),s,s,s,s,B.U,s,!1,s,B.ZD,s),s,s),s),s)}}
 A.a7p.prototype={
 $0(){$.RD().xp()
-$.RD().If(new A.Lj("hello",null),B.Bl,A.cL(0,0,3))},
+$.RD().If(new A.Lj("\u54c8\u55bd",null),B.Bl,A.cL(0,0,3))},
 $S:0}
 A.Cm.prototype={$iP:1}
 A.M9.prototype={
